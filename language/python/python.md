@@ -21,3 +21,11 @@ check the variable(function) is callable
 * functools
 ---
 to be extended ...
+
+* find() for string or list, which is used for finding the index of the first occurence in a string
+e.g
+```python
+def strStr(haystack: str, needle: str) -> int:
+    return hqystack.find(needle)
+```
+This 
