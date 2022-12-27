@@ -35,3 +35,4 @@ In ths status bar, the window number is shown
 - Ctrl+b !: make current pane as an independent window
 - Ctrl+b z: make current pane maximum
 - Ctrl+b q: show pane number
+- Ctrl+b pageup/down: scroll the pane
