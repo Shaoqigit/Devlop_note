@@ -3,9 +3,16 @@
 ### vim has different modes:
 **normal**, **insert**, **replace**, **command-line**
 ## vim modifier: a,i %
+## Ctrl+W
 
+switch between windows
+w: next
+k:
+l:
+h:
 
 - `:sp` seprate the windows
+- `:vsp <FILE NAME>`seprate vertically and open a new file
 - `:tabnew` add a new tab
 -  `:help COMMAND` documentation for commands
 
