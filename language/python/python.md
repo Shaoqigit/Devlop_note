@@ -28,4 +28,9 @@ e.g
 def strStr(haystack: str, needle: str) -> int:
     return hqystack.find(needle)
 ```
-This 
+## Refactoring the code
+- less conditionel statement, less variables_name
+- using list/set/dict comprehension
+- use properly the function and class
+- Triangular code worse than flat code
+- use build-in function and standard libarary 
