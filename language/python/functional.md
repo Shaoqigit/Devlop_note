@@ -1,7 +1,31 @@
 # Function and functional programming with Python
+*LEGB* rule: Local, enclosing, global, built-in
 
-"*arg" positional arguments
-"**kwarg" keywords arguments, which returns a python dict, function .items() can be used
+## Local function
+- useful for specialized, one-off functions
+- Aid in code organization and readability
+- similar to lambdas, but more general: 1. may contain multiple expressions; 2. may contain statements
+**local function closes over the objects it needs, preventing them from being garbage collected**:
+-> function factory: function that returns new, specialized functions
+e.g
+```python
+def raise_to(exp):
+    def raise_to_exp(x):
+        return pow(x, exp)
+    return raise_to_exp
+ >>> square = raise_to(2)
+ >>> square(5)
+ >>> 25
+ >>> cube = raise_to(3)
+ >>> cube(5)
+ >>> 125
+ ```
+ 
+## First-class functions: functions can be treated like any other object
+
+"`*arg`" positional arguments
+ 
+"`**kwarg`" keywords arguments, which returns a python dict, function .items() can be used
 
 ## Decorator of a function
 
