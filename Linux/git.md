@@ -8,7 +8,13 @@ HEAD is pointing to you current working directory
 - git diff [ARG]
 - git init
 - git add
+  **remark**: an interactive way to use git add is:
+  git add -p
 - git commit
+- git show
+- git stash
+- git .gitignore
+
 
 ### remote command, to connec to remote repository such as github/lab ... 
 - git remote
@@ -30,3 +36,5 @@ Make your commit line clean and linear ！！！
 ## Git work flow for development
 
 - feature based
+
+## Git worktree !
