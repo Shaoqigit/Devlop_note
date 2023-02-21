@@ -11,6 +11,7 @@ HEAD is pointing to you current working directory
   **remark**: an interactive way to use git add is:
   git add -p
 - git commit
+- git branch -D
 - git show
 - git stash
 - git .gitignore
@@ -38,3 +39,8 @@ Make your commit line clean and linear ！！！
 - feature based
 
 ## Git worktree !
+
+```bash
+git worktree list
+git worktree prune
+```
