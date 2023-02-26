@@ -1,5 +1,6 @@
 # Basic and common class and its methods:
-## STL
+## std::vector
+- at: Read-only (constant) reference to data.
 - size_t: std::size_t is the unsigned integer type of the result of the sizeof operator
 e.g
 ```cpp
@@ -25,3 +26,4 @@ int main()
     // is an infinite loop, because unsigned numbers are always non-negative
 }
 ```
+ - unordered_map: an associative container that contains key-value pairs with unique keys
