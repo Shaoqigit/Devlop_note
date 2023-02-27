@@ -12,6 +12,7 @@ HEAD is pointing to you current working directory
   git add -p
 - git commit
 - git branch -D
+- git clean -f
 - git show
 - git stash
 - git .gitignore
