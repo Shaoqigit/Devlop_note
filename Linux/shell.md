@@ -75,3 +75,18 @@ dollar symbol represent the variable `$`,
 
 `cd /sys` kernel
 run shell as root `sudo su`
+
+## dirctory system
+- bin: binaries, all the functions and applications used
+  sbin: system binary 
+- dev: devices
+- etc: system-wide configuration
+- lib/lib32/lib64
+- media&mnt : external disks
+- opt:
+- proc: process
+- root
+- sys
+- usr: user application
+- var: variables
+- **home**:
