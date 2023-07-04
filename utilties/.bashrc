@@ -1,3 +1,29 @@
+# some more ls aliases
+alias ll='ls -lpFh --color'
+alias la='ls -lapFh'
+alias ls='ls --color'
+alias l='ls -CF'
+
+# some more bash alias
+alias grep='grep --color=auto'
+alias diff='colordiff'
+
+# alias for git
+alias gco='git checkout'
+alias gst='git status'
+alias gcm='git commit -m'
+alias gad='git add'
+alias glg='git log --all --graph --decorate --oneline'
+
+# tmux
+alias tdevs='./run_tmux.sh'
+alias tatchs='tmux attach-session -t'
+
+#docker
+export compile_mode='Release'
+export program_name='runHelmholtz_$compile_mode'
+export eXlibris='heuristic_raman'
+alias docker_acoustiX='docker start $eXlibris && docker exec -ti $eXlibris /bash && cdd && cd build make'
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -63,11 +89,13 @@ else
 fi
 unset color_prompt force_color_prompt
 
+# ============================GIT show up====================================================
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\[\033[34m\]\]\u@\h:\[\033[32m\]\w\[\033[31m\]\$(parse_git_branch)\[\033[00m\]$ "
+export PS1="\[\033[35m\]\]\u@\h:\[\033[32m\]\w\[\033[31m\]\$(parse_git_branch)\[\033[00m\]$ "
 
+# ==================================================================================
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
@@ -92,64 +120,11 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-alias gmsh='cd /mnt/f/01_Dev_XFEM/gmsh-4.11.0-Windows64/gmsh-4.11.0-Windows64; ./gmsh.exe'
-
-# some more bash alias
-alias grep='grep --color=auto'
-alias diff='colordiff'
-
-# alias for git
-alias gco='git checkout'
-alias gst='git status'
-alias gcm='git commit -m'
-alias gad='git add'
-alias glg='git log --all --graph --decorate --oneline'
-
-# tmux
-alias tdevs='./run_tmux.sh'
-alias tatchs='tmux attach-session -t'
-#Dev
-export BASEDIR=~/ngsuite
-export NETGENDIR="${BASEDIR}/ngsolve-install/bin"
-export PATHPIP="/home/shaoqi/.local/bin"
-export PYTHONPATH_TMP=`python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1,0,''))"`
-export PYTHONPATH=/usr/lib/python3/dist-packages/:/home/shaoqi/Dev/AcoustiX/build/:/home/shaoqi/Dev/skfem/scikit-fem
-export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/
-#export DISPLAY=192.168.1.9:0
-
-export DISPLAY=192.168.137.1:0
-export LIBGL_ALWAYS_INDIRECT=1
-
-#MPI
-export MPI_DIR=~/Dev_tool/openmpi/openmpi-install
-
-#ASFEM
-export asfem=~/Asfem/AsFem
-#export PATH=$PATH:$asfem/bin
 
 
 
-export PATH=$PYTHONPATH:$PATHPIP:$NETGENDIR:$PATH:$MPI_DIR/bin:$asfem/bin:/usr/bin
-export OMP_NUM_THREADS=1
-
-export C_INCLUDE_PATH=$MPI_DIR/include:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=$MPI_DIR/include:$CPLUS_INCLUDE_PATH
-export FPATH=$MPI_DIR/include:$FPATH
-export MANPATH=$MPI_DIR/share/man:$MANPATH
-export LD_LIBRARY_PATH=$MPI_DIR/lib:$LD_LIBRARY_PATH
-
-export PYTHONPATH=$NETGENDIR/../${PYTHONPATH_TMP}:$PATH
-
-export CC=mpicc
-export CXX=mpicxx
-export FC=mpif90
-export F90=mpif90
 # Add an "alert" alias for long running commands.  Use like so:
+
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
