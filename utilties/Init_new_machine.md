@@ -11,5 +11,6 @@
 	git add .
 	git commit
 	git remote add origiin <YOUR GIT HUB URL>
+6. `sudo apt install cmake
 
 
