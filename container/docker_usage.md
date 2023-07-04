@@ -3,6 +3,14 @@
 ## Container can be considered as virtual "develop" environment where all necessay system set-up is equipped
 
 ## Image is packaged container that can be share to others, one can establish a container based on the image
+### It's better install docker engin on linux
+* permission denied:
+```
+sudo groupadd -f docker
+sudo usermod -aG docker $USER
+newgrp docker
+groups
+```
 
 * **Load** a existing images, use:
  command `load IMAGE_NAME` differ from the command `import IMAGE_NAME`
@@ -23,4 +31,4 @@ option `-a` showing all the containers
 * Run existing container:
   `docker attach/exec -option CONTAINER_NAME`
   ** if you want to run the same container within another terminal use:
-  `docker exec -ti CONTAINER_NAME /bash`
+  `docker exec -ti CONTAINER_ID bash`
