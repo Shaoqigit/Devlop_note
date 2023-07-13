@@ -4,6 +4,10 @@
 	cp the .vimrc in this repo: attention neovim uses the .config/init_vim 
 2. cp the .bashrc in this repo, custome your own variable and alias
 3. verify ssh
+connect to server using ssh:
+* generate key pair: `ssh-keygen`
+* add the generated public key normally is `id_rsa` to the server `.ssh/authorized_key`: `ssh-copy-id - i id_rsa.pub username@server_address`
+
 4. sudo install docker engine (not desktop)
 5. sudo apt install git:
 	git init
