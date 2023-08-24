@@ -14,7 +14,7 @@ HEAD is pointing to you current working directory
 - git branch -D
 - git clean -f
 - git show
-- git stash
+- git stash {push -m "stashName"}/ {apply stash stash^stashName} / pop
 - git .gitignore
 
 
