@@ -18,7 +18,7 @@ check the variable(function) is callable
 
 * `.__name__` return the name of an object with type of string
 
-* functools
+* functools: cache_property (for @property which will be used repeatly)
 ---
 to be extended ...
 
@@ -34,3 +34,7 @@ def strStr(haystack: str, needle: str) -> int:
 - use properly the function and class
 - Triangular code worse than flat code
 - use build-in function and standard libarary 
+
+## for long
+- try to use list comprehension
+- when using `any()` or `all()`, generator `()` is preferable than `list comprehension[]`
