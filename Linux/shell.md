@@ -47,6 +47,7 @@ dollar symbol represent the variable `$`,
 - `cp` copy and `scp` secure copy
 - `man COMMAND` manual
 - `CTRL+L` or `clear`: clear the terminal and prompt to top
+- Disk related: check disk usage information -> `df`, check current directory disk ranking -> `du -hs $PATH | sort -rh | head -16`
 
 ---
 ## Tricky commands
