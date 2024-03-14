@@ -12,7 +12,7 @@ HEAD is pointing to you current working directory
   git add -p
 - git commit
 - git branch -D
-- git clean -f
+- git clean -f(--force) -d(recursive directories) -x (all untracked files)
 - git show
 - git stash {push -m "stashName"}/ {apply stash stash^stashName} / pop
 - git .gitignore
